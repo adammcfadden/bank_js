@@ -17,16 +17,30 @@ BankAccount.prototype.changeNickname = function(newName) {
 }
 
 $(document).ready(function() {
-  $("#new-account-form").submit(function(event) {
+  $("form#new-account-form").submit(function(event) {
     event.preventDefault();
 
     var inputtedUserName = $("input#input-user-name").val();
     var inputtedAccountNickname = $("input#input-account-nickname").val();
     var inputtedBalance = parseInt($("input#input-balance").val());
 
-    var newAccount = new BankAccount(inputtedUserName, inputtedAccountNickname, inputtedBalance)
+    newAccount = new BankAccount(inputtedUserName, inputtedAccountNickname, inputtedBalance)
 
     $("#account-nickname").text(newAccount.accountNickname)
+    $("#balance").text(newAccount.balance)
+
+  });
+
+  $("form#deposit-withdraw-form").submit(function(event) {
+    event.preventDefault();
+    var inputtedWithdrawAmount = parseInt($("input#input-withdraw").val());
+    var inputtedDepositAmount = parseInt($("input#input-deposit").val());
+
+
+    newAccount.withdrawal(inputtedWithdrawAmount)
+    newAccount.deposit(inputtedDepositAmount)
+
+    $("#balance").text('')
     $("#balance").text(newAccount.balance)
   });
 });
