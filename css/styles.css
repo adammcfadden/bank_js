@@ -1,16 +1,3 @@
-.jumbotron {
-  background-image: url("../goblin.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  text-align: center;
-  position: relative;
-  color: #ffd700;
-}
-
 .container {
   font-family: 'harrypotter';
 }
@@ -22,4 +9,65 @@
 @font-face {
   font-family: 'harrypotter'; /*a name to be used later*/
   src: url('../fonts/HARRYP.TTF'); /*URL to font*/
+}
+
+.entry {
+  background-image: url('http://share.gifyoutube.com/vJ4dxr.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  color: #ffd700;
+  height: 100%;
+  font-family: 'harrypotter';
+  display: block;
+}
+
+#entry-text {
+  padding-top: 35%;
+  text-align: center;
+}
+
+#entry-text:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.welcome {
+  font-size: 72px;
+}
+
+#existing-account, #new-account, #user-portal, .sign-up, #mainsite {
+  display: none;
+}
+
+#select-new-account:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#select-existing-account:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#mainsite {
+  background-color: black;
+  color: #ffd700;
+  text-align: center;
+  height: 100%;
+}
+
+.footer {
+    position : absolute;
+    bottom : 30;
+    height : 40px;
+    margin-top : 40px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

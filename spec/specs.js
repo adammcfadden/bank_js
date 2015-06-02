@@ -18,6 +18,6 @@ describe('BankAccount', function() {
   });
 
   it("will let the user change their accountNickname", function() {
-    expect(testBankAccount.changeNickname("Climbing Gear Fund")).to.equal("Climbing Gear Fund");
+    expect(testBankAcount.changeNickname("Climbing Gear Fund")).to.equal("Climbing Gear Fund");
   });
 });

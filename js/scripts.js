@@ -26,8 +26,16 @@ $(document).ready(function() {
 
     newAccount = new BankAccount(inputtedUserName, inputtedAccountNickname, inputtedBalance)
 
-    $("#account-nickname").text(newAccount.accountNickname)
-    $("#balance").text(newAccount.balance)
+    $("#select-account").append('<option value=\"' + newAccount.accountNickname + '\">' + newAccount.accountNickname + '</option>');
+
+    $("#account-nickname").text(newAccount.accountNickname);
+    $("#balance").text(newAccount.balance);
+
+    $(".sign-up").hide();
+    $("#user-portal").show();
+    $(".account-details").show();
+
+    $("#users-name").text(", " + newAccount.userName);
 
   });
 
@@ -35,12 +43,44 @@ $(document).ready(function() {
     event.preventDefault();
     var inputtedWithdrawAmount = parseInt($("input#input-withdraw").val());
     var inputtedDepositAmount = parseInt($("input#input-deposit").val());
+    if (isNaN(inputtedWithdrawAmount)) {
+      inputtedWithdrawAmount = 0;
+    };
 
-
+    if (isNaN(inputtedDepositAmount)) {
+      inputtedDepositAmount = 0;
+    };
     newAccount.withdrawal(inputtedWithdrawAmount)
     newAccount.deposit(inputtedDepositAmount)
 
     $("#balance").text('')
     $("#balance").text(newAccount.balance)
+  });
+
+  $(".entry").click(function() {
+    $(".entry").hide();
+    $("#mainsite").fadeIn("slow");
+    $(".sign-up").fadeIn("slow");
+  });
+
+  $("#select-new-account").click(function() {
+    $("#existing-account").hide()
+    $("#new-account").slideDown("slow");
+  });
+
+  $("#select-existing-account").click(function() {
+    $("#new-account").hide();
+    $("#existing-account").slideDown("slow");
+  });
+
+  $("#return-home").click(function(){
+    $(".account-details").hide();
+    $("#user-portal").hide();
+    $("#new-account").hide();
+    $("#existing-account").hide()
+    $("#users-name").text("");
+    $("#mainsite").show();
+    $(".header").fadeIn("slow");
+    $(".sign-up").fadeIn("slow");
   });
 });
