@@ -1,1 +1,18 @@
+.jumbotron {
+  background-image: url("../goblin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  position: relative;
+  font-family: 'harrypotter';
+  color: #ffd700;
+}
 
+@font-face {
+  font-family: 'harrypotter'; /*a name to be used later*/
+  src: url('../fonts/HARRYP.TTF'); /*URL to font*/
+}

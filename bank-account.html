@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Gringotts!</h1>
+      </div>
+    </div>
+
+    <div class="container sign-up">
+      <div class="row">
+        <div class="col-sm-6">
+          <form id="new-account-form">
+            <div class="form-group">
+              <input id="input-user-name" type="text" class="form-control" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+              <input id="input-account-nickname" type="text" class="form-control" placeholder="Account Nickname">
+            </div>
+            <div class="form-group">
+              <input id="input-balance" type="text" class="form-control" placeholder="Balance">
+            </div>
+            <button name="submit-new-account-form" type="submit" class="btn btn-large btn-warning">Submit</button>
+          </form>
+      </div>
+
+    <div class="col-sm-6">
+      <div class="container deposit-withdraw">
+      </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container account-details">
+      <h1>Account Details</h1>
+      <p>Account Nickname: <span id="account-nickname"></span></p>
+      <p>Current Balance: <span id="balance"></span></p>
+    </div>
+
+  </body>
+</html>
